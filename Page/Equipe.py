@@ -6,6 +6,7 @@ profile_pic = current_dir  / "Assets" / "Profile picture.png"
 
 def show():
     st.title("👥 Equipe/Grupo")
+    st.write("###")
 
     col1, col2, col3, col4, col5 = st.columns(5, gap="small")
 
