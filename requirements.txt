@@ -5,4 +5,5 @@ scipy
 plotly
 openpyxl
 streamlit-extras
-seaborn 
+seaborn
+streamlit_option_menu

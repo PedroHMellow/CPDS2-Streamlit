@@ -5,7 +5,7 @@ from streamlit_option_menu import option_menu
 
 # Configurações da Pagina 
 TPagina = "CP2DS | Dashboards"
-st.set_page_config(page_title=TPagina)
+st.set_page_config(page_title=TPagina, layout="wide")
 
 
 #css
