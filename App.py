@@ -7,12 +7,14 @@ from streamlit_option_menu import option_menu
 TPagina = "CP2DS | Dashboards"
 st.set_page_config(page_title=TPagina)
 
+
+#css
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 css_file = current_dir / "Styles" / "Main.css"
 
-
 with open(css_file) as f:
-    st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
+    st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
 
 # Sidebar
 with st.sidebar:
