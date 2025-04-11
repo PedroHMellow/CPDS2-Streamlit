@@ -69,4 +69,12 @@ Essa análise abre o caminho para:
     st.markdown("#")
 
     st.header("Descrição Tipo de Variáveis")
-    st.write("Escrever...")
+    st.write("- Qualitativa nominal:  Nome dos Posts, Link, Tipo de Publicação ")
+    st.write("- Qualitativa ordinal:  Dia da Semana do Post")
+    st.write("- Quantitativa discreta:  Duração Segundos, alcance, Compartilhamentos, Novos Seguidores, Comentários, Vídeos Salvos, Visualizações")
+    st.write("- Quantitativa contínua:  Curtidas, Horário de postagem")
+
+
+
+
+
