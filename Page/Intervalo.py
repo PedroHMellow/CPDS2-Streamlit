@@ -9,11 +9,11 @@ def show():
     st.write("# Tabela IG para consulta:")
     st.divider()
     st.dataframe(st.session_state["df_ig"])
+
+
+
     st.write(" ")
     st.write(" ")
-
-
-
     st.write("# Intervalo de Confiança:")
     st.divider()
     col1, col2, col3 = st.columns([4, 3, 3])
@@ -41,7 +41,7 @@ def show():
     col3.write("##### Valor de Confiança:")
     confianca_dado = col3.selectbox(
         label="",
-        options=(0.90, 0.95, 0.99),
+        options=(0.80, 0.90, 0.99),
         index = None,
         placeholder="Confiabilidade do dado..."
                                 )
@@ -353,3 +353,13 @@ def show():
         col1, col2 = st.columns(2)
         col1.plotly_chart(st.session_state["imagem_intervalo_antigo"], key="versus antigo")
         col2.plotly_chart(st.session_state["imagem_intervalo_novo"], key="versus novo")
+
+
+
+    st.write(" ")
+    st.write(" ")
+    st.write("# Interpretações:")
+    st.divider()
+    st.write("Analisando as simulações foi possível observar uma redução da Margem de Erro tanto através da redução  do Valor de Confiança quanto da remoção dos Outliers da Primeira Abordagem.")
+    st.write("No primeiro caso(Valor de Confiança), a redução da Margem de erro é efeito direto de uma redução da precisão desse Intervalo. Desse forma, um aumento da Margem de erro devido a um aumento do Valor de Confiança se mostra benéfico por se aproximar mais do conjunto real.")
+    st.write("Já no segundo caso(Outliers da Primeira Abordagem), a redução da Margem de erro é efeito direto da redução do Desvio Padrão, consequência da remoção dos antigos Outliers e da construção uma amostra com valores mais próximos uns dos outros. Essa remoção se mostra necessária porque nessa amostragem em específico há posts que receberam um boost de publicidade, mas que não foram identificados, precisando, assim, supor que eles seriam os valores discrepantes(Outliers). Desse forma, uma redução da Margem de erro devido à remoção de Outliers de  se mostra benéfico por se aproximar mais do conjunto real e aumentar a precisão do Intervalo de Confiança.")

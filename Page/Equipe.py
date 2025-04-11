@@ -2,7 +2,8 @@ import streamlit as st
 from pathlib import Path
 
 current_dir = Path(__file__).parent.parent if "__file__" in locals() else Path.cwd().parent
-profile_pic = current_dir  / "Assets" / "Profile picture.png"  
+profile_pic = current_dir  / "Assets" / "Profile picture.png"
+Gustavo_pic = current_dir  / "Assets" / "Gustavo.jpg"  
 
 def show():
     st.title("👥 Equipe/Grupo")
@@ -19,6 +20,7 @@ def show():
         st.write("RM553899")
 
     with col3:
+        st.image(str(Gustavo_pic), width=230)
         st.write("Gustavo Gouvêa Soares")
         st.write("RM553842 ")
 
