@@ -4,6 +4,8 @@ from pathlib import Path
 current_dir = Path(__file__).parent.parent if "__file__" in locals() else Path.cwd().parent
 profile_pic = current_dir  / "Assets" / "Profile picture.png"
 Gustavo_pic = current_dir  / "Assets" / "Gustavo.jpg"  
+Borba = current_dir  / "Assets" / "Borba.jpg"  
+Henrique = current_dir  / "Assets" / "Henrique_perfil.png"
 
 def show():
     st.title("👥 Equipe/Grupo")
@@ -12,6 +14,7 @@ def show():
     col1, col2, col3, col4, col5 = st.columns(5, gap="small")
 
     with col1:
+        st.image(str(Borba), width=230)
         st.write("Gabriel Borba")
         st.write("RM553187")
 
@@ -25,6 +28,7 @@ def show():
         st.write("RM553842 ")
 
     with col4:
+        st.image(str(Henrique), width=230)
         st.write("Henrique Rafael Gomes de Souza")
         st.write("RM553945")
 
