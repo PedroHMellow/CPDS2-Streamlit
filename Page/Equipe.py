@@ -6,7 +6,7 @@ profile_pic = current_dir  / "Assets" / "Profile picture.png"
 Gustavo_pic = current_dir  / "Assets" / "Gustavo.jpg"  
 Borba = current_dir  / "Assets" / "Borba.jpg"  
 Henrique = current_dir  / "Assets" / "Henrique_perfil.png"
-
+EnzoT = current_dir  / "Assets" / "enzo.jpeg"
 def show():
     st.title("👥 Equipe/Grupo")
     st.write("###")
@@ -19,6 +19,7 @@ def show():
         st.write("RM553187")
 
     with col2:
+        st.image(str(EnzoT), width=230)
         st.write("Enzo Teles de Moura")
         st.write("RM553899")
 
