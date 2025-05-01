@@ -50,6 +50,7 @@ def show():
         st.markdown(circular_profile(get_base64_image(Henrique), "Henrique Rafael Gomes de Souza", "RM553945"), unsafe_allow_html=True)
 
     with col5:
-        st.image(str(profile_pic), width=230)
-        st.write("Pedro Henrique Mello Silva Alves")
-        st.write("RM554223")
+         st.image(str(profile_pic), width=230)
+         st.write("Pedro Henrique Mello Silva Alves")
+         st.write("RM554223")
+         st.markdown(circular_profile(get_base64_image(profile_pic), "Pedro Henrique Mello Silva Alves", "RM554223"), unsafe_allow_html=True)
