@@ -70,7 +70,9 @@ with st.sidebar:
     )
     selected = option_menu("Navegação", ["Home", "Intervalo de Confiança", "Testes de Hipótese", "Equipe"],
                            icons=['house', 'graph-up', 'bar-chart', 'people-fill'], 
-                           menu_icon="cast", default_index=0)
+                           menu_icon="cast",
+                           default_index=0,
+                           styles={"menu-title": {"font-size": "30px"}})
 
 if selected == "Home":
     from Page import Home

@@ -3,13 +3,36 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
+from pathlib import Path
 from scipy import stats
 
-def show():
+
+current_dir = Path(__file__).parent.parent if "__file__" in locals() else Path.cwd().parent
+intervalo_png = current_dir  / "Assets" / "calculo_intervalo.png"
+
+
+def show():    
     st.write("# Tabela IG para consulta:")
     st.divider()
-    st.dataframe(st.session_state["df_ig"])
+    with st.expander("📊 Tabela"):
+        st.write(" ")
+        st.write(" ")
+        st.dataframe(st.session_state["df_ig"])
 
+
+    st.write("# Cálculo para Intervalo de Confiança:")
+    st.divider()
+    col1, col2, col3, col4 = st.columns(4)
+    col2.write(" ")
+    col2.write(" ")
+    col2.write(" ")
+    col2.write(" ")
+    col2.image(str(intervalo_png), width=230)
+    col3.write("CI = Intervalo de Confiança")
+    col3.write("x̅ = Média da Amostra")
+    col3.write("z = Valor do Nível de Confiança")
+    col3.write("s = Desvio Padrão da Amostra")
+    col3.write("n = Tamanho da Amostra")
 
 
     st.write(" ")
