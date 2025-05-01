@@ -8,4 +8,3 @@ openpyxl
 streamlit-extras
 seaborn
 streamlit_option_menu
-base64
